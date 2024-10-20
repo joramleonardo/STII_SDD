@@ -16,7 +16,6 @@ class CreateRequesttTable extends Migration
         Schema::create('requestt', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('client_ID')->unsigned();
-            $table->foreign('client_ID')->references('id')->on('clients')->onDelete('cascade');
             $table->date('transactionDate');
             $table->string('status');
             $table->string('callNumber');

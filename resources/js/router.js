@@ -103,9 +103,69 @@ import AdminSJA_Dashboard from './views/Dashboard-Author-SJA.vue';
 import AdminPJS_Dashboard from './views/Dashboard-Author-PJS.vue';
 import AdminSTARBOOKS_Dashboard from './views/Dashboard-Author-Starbooks.vue';
 import AdminDOSTv_Dashboard from './views/Dashboard-Author-DOSTv.vue';
+
+
+import Home from './views/Main/Home.vue';
+import Dashboard from './views/Main/Dashboard.vue';
+import DOSTv from './views/Main/A_DOSTv.vue';
+import HR from './views/Main/A_hr.vue';
+import Library from './views/Main/A_Library.vue';
+import PJS from './views/Main/A_PJS.vue';
+import SJA from './views/Main/A_SJA.vue';
+import STARBOOKS from './views/Main/A_Starbooks.vue';
+
+
 Vue.use(Router);
 
 const routes = [
+    
+    {
+        path: '/',
+        name: '',
+        component: Home
+    },
+    {
+        path: '/home',
+        name: 'home',
+        component: Home,
+        children: [
+            {
+                path: '/dashboard/',
+                name: 'dashboard',
+                component: Dashboard,
+            },
+            {
+                path: '/starbooks/',
+                name: 'starbooks',
+                component: STARBOOKS,
+            },
+            {
+                path: '/sja/',
+                name: 'sja',
+                component: SJA,
+            },
+            {
+                path: '/pjs/',
+                name: 'pjs',
+                component: PJS,
+            },
+            {
+                path: '/dostv/',
+                name: 'dostv',
+                component: DOSTv,
+            },
+            {
+                path: '/hr/',
+                name: 'hr',
+                component: HR,
+            },
+            {
+                path: '/library/',
+                name: 'library',
+                component: Library,
+            },
+        ],
+    },
     //Super Admin Routes
     {
         path: '/superadmin',
@@ -559,11 +619,11 @@ const routes = [
         name: 'login',
         component: LoginPage
     },
-    {
-        path: '/',
-        name: '',
-        component: LoginPage
-    }
+    // {
+    //     path: '/',
+    //     name: '',
+    //     component: LoginPage
+    // }
 ];
 
 const router = new Router({

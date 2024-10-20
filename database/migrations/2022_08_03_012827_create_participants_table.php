@@ -16,7 +16,6 @@ class CreateParticipantsTable extends Migration
         Schema::create('participants', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('event_id')->unsigned();
-            $table->foreign('event_id')->references('id')->on('event')->onDelete('cascade');
             $table->string('name');
             $table->string('email');
             $table->string('sex');

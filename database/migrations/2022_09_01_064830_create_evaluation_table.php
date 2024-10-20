@@ -16,7 +16,6 @@ class CreateEvaluationTable extends Migration
         Schema::create('evaluation', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('client_ID')->unsigned();
-            $table->foreign('client_ID')->references('id')->on('clients')->onDelete('cascade');
             $table->date('transactionDate');
             $table->string('eval_1');
             $table->string('eval_2');

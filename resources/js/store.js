@@ -11,3 +11,12 @@ export default new Vuex.Store({
     mutations: {},
     actions: {}
 });
+
+// export default new Vuex.Store({
+//     state: {
+//         apiURL: 'http://sdd.stii.local/api',
+//         serverPath: 'http://sdd.stii.local'
+//     },
+//     mutations: {},
+//     actions: {}
+// });
